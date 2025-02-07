@@ -2,11 +2,11 @@
 
     "token": "your discord bot token",
 
-    "ipAddress": "mc.hypixel.net",
-    "port": "optional - the port of your minecraft server",
-    "playersChannel": "9802980280282",
-    "statusChannel": "3809390383",
-    "updateInterval": "11min",
+    "ipAddress": "play.kineticmc.net",
+    "port": "25565",
+    "playersChannel": "1337249043394465895",
+    "statusChannel": "1337248983155871845",
+    "updateInterval": "1min",
 
-    "prefix": "!"
+    "prefix": "!!"
 }
