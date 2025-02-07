@@ -19,7 +19,7 @@ const updateChannel = async () => {
     // Fetch statistics from mcapi.us
     const res = await fetch(`https://api.mcsrvstat.us/3/${config.ipAddress}${config.port ? `&port=${config.port}` : ''}`)
     if (!res) {
-        const statusChannelName = `【🛡】Status: Offline`
+        const statusChannelName = `🔴・Status: Offline`
         client.channels.cache.get(config.statusChannel).setName(statusChannelName)
         return false
     }
@@ -33,8 +33,8 @@ const updateChannel = async () => {
     const status = (body.debug.ping ? "Online" : "Offline")
 
     // Generate channel names
-    const playersChannelName = `【👥】Players: ${players}`
-    const statusChannelName = `【🛡】Status: ${status}`
+    const playersChannelName = `👥・Online ${players}`
+    const statusChannelName = `🟢・Status: ${status}`
 
     // Update channel names
     client.channels.cache.get(config.playersChannel).setName(playersChannelName)
@@ -90,7 +90,7 @@ client.on('messageCreate', async (message) => {
             ])
             .setColor("#FF0000")
             .setFooter({
-                text: "Open Source Minecraft Discord Bot"
+                text: "KineticMC | Network Status Bot | v1.0.0"
             })
         
         sentMessage.edit({
